@@ -5,10 +5,14 @@
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/aniketjain)
 
+#### A Simple and Beautiful Calculator App.
+
 ## Screenshots
 
 <p float="left">
 	<img src="https://github.com/dev-aniketj/Calculator-app/blob/master/SS/video1.gif" height="500"/>
+	<img src="https://github.com/dev-aniketj/Calculator-app/blob/master/SS/image1.png" height="500"/>
+	<img src="https://github.com/dev-aniketj/Calculator-app/blob/master/SS/image2.gif" height="500"/>
 </p>
 
 
