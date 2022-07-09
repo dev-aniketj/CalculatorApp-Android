@@ -33,11 +33,11 @@ public class HomeActivity extends AppCompatActivity {
     private void onClickListeners() {
 
         // ROW 1
-        binding.btnAc.setOnClickListener(view -> {
+        binding.buttons.btnAc.setOnClickListener(view -> {
             binding.inputText.setText("");
             binding.outputText.setText("");
         });
-        binding.btnPlusMinus.setOnClickListener(view -> {
+        binding.buttons.btnPlusMinus.setOnClickListener(view -> {
             data = binding.inputText.getText().toString();
             if (data.charAt(0) != '-') {
                 binding.inputText.setText("-" + data);
@@ -48,8 +48,8 @@ public class HomeActivity extends AppCompatActivity {
                 binding.inputText.setText(new_data.toString());
             }
         });
-        binding.btnPerc.setOnClickListener(view -> setInputData("%"));
-        binding.btnDiv.setOnClickListener(view -> setInputData("÷"));
+        binding.buttons.btnPerc.setOnClickListener(view -> setInputData("%"));
+        binding.buttons.btnDiv.setOnClickListener(view -> setInputData("÷"));
 
         // ROW 2
         binding.btn7.setOnClickListener(view -> setInputData("7"));

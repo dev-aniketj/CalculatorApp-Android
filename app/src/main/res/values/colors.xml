@@ -12,5 +12,7 @@
     <color name="mainBGColor">#22252D</color>
     <color name="buttonBGColor">#292D36</color>
     <color name="textColor">#f9f9f9</color>
+    <color name="btnBGColor">#212429</color>
+    <color name="fillColor">#26F9D3</color>
 
 </resources>
