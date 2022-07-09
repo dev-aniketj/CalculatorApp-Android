@@ -1,5 +1,6 @@
 package com.aniketjain.calculator;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 
@@ -32,9 +33,19 @@ public class HomeActivity extends AppCompatActivity {
         binding.btn4.setOnClickListener(view -> setInputData("4"));
         binding.btn5.setOnClickListener(view -> setInputData("5"));
         binding.btn6.setOnClickListener(view -> setInputData("6"));
+        binding.btn7.setOnClickListener(view -> setInputData("7"));
+        binding.btn8.setOnClickListener(view -> setInputData("8"));
+        binding.btn9.setOnClickListener(view -> setInputData("9"));
+
+        binding.btnDot.setOnClickListener(view -> setInputData("."));
+        binding.btnAc.setOnClickListener(view -> {
+            binding.inputText.setText("");
+            binding.outputText.setText("");
+        });
 
     }
 
+    @SuppressLint("SetTextI18n")
     private void setInputData(String data) {
         this.data = binding.inputText.getText().toString();
         binding.inputText.setText(this.data + data);
