@@ -90,15 +90,18 @@ public class HomeActivity extends AppCompatActivity {
 
         // ROW 5
         binding.buttons.btnDel.setOnClickListener(view -> {
-            /*
+            if (binding.values.inputText.getText() == "") showToast();
+            else {
+             /*
               @params flag - when use change the operator, and want to add new one.
              */
-            flag = true;
-            data = binding.values.inputText.getText().toString();
-            StringBuilder new_data = new StringBuilder();
-            for (int i = 0; i < data.length() - 1; i++)
-                new_data = new_data.append(data.charAt(i));
-            binding.values.inputText.setText(new_data.toString());
+                flag = true;
+                data = binding.values.inputText.getText().toString();
+                StringBuilder new_data = new StringBuilder();
+                for (int i = 0; i < data.length() - 1; i++)
+                    new_data = new_data.append(data.charAt(i));
+                binding.values.inputText.setText(new_data.toString());
+            }
         });
         binding.buttons.btn0.setOnClickListener(view -> setInputData("0"));
         binding.buttons.btnDot.setOnClickListener(view -> {
