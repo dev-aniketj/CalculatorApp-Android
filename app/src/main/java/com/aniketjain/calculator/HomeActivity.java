@@ -29,9 +29,9 @@ public class HomeActivity extends AppCompatActivity {
         binding.btn1.setOnClickListener(view -> setInputData("1"));
         binding.btn2.setOnClickListener(view -> setInputData("2"));
         binding.btn3.setOnClickListener(view -> setInputData("3"));
-        binding.btn4.setOnClickListener(view -> setInputData("3"));
-        binding.btn4.setOnClickListener(view -> setInputData("3"));
-
+        binding.btn4.setOnClickListener(view -> setInputData("4"));
+        binding.btn5.setOnClickListener(view -> setInputData("5"));
+        binding.btn6.setOnClickListener(view -> setInputData("6"));
 
     }
 
