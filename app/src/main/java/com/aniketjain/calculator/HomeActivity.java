@@ -43,21 +43,25 @@ public class HomeActivity extends AppCompatActivity {
         });
         binding.btnPlusMinus.setOnClickListener(view -> {
         });
-        binding.btnPerc.setOnClickListener(view ->  setInputData("/100"));
-        binding.btnDiv.setOnClickListener(view ->  setInputData("/"));
-        binding.btnMul.setOnClickListener(view ->  setInputData("*"));
+        binding.btnPerc.setOnClickListener(view -> setInputData("%"));
+        binding.btnDiv.setOnClickListener(view -> setInputData("÷"));
+        binding.btnMul.setOnClickListener(view -> setInputData("x"));
         binding.btnMinus.setOnClickListener(view -> setInputData("-"));
         binding.btnPlus.setOnClickListener(view -> setInputData("+"));
-        binding.btnEqual.setOnClickListener(view -> {
-        });
-
+        binding.btnEqual.setOnClickListener(view -> doCalculation());
         binding.btnDot.setOnClickListener(view -> setInputData("."));
-
     }
 
     @SuppressLint("SetTextI18n")
     private void setInputData(String data) {
         this.data = binding.inputText.getText().toString();
         binding.inputText.setText(this.data + data);
+    }
+
+    private void doCalculation() {
+        data = binding.inputText.getText().toString();
+        data = data.replace("%", "/100");
+        data = data.replace("÷", "/");
+        data = data.replace("x", "*");
     }
 }
