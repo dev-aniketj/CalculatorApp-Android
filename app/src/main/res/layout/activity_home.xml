@@ -21,18 +21,20 @@
             android:paddingRight="20dp"
             android:text="7 x 2"
             android:textColor="@color/textColor"
-            android:textSize="32sp"/>
+            android:textSize="32sp"
+            tools:ignore="RtlSymmetry" />
 
         <TextView
             android:id="@+id/output_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="right|end"
+            android:gravity="end"
             android:paddingEnd="20dp"
             android:paddingRight="20dp"
             android:text="14"
             android:textColor="@color/textColor"
-            android:textSize="50sp" />
+            android:textSize="50sp"
+            tools:ignore="RtlSymmetry" />
 
     </LinearLayout>
 
