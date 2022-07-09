@@ -3,10 +3,14 @@ package com.aniketjain.calculator;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.aniketjain.calculator.databinding.ActivityHomeBinding;
+
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.Scriptable;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -58,10 +62,28 @@ public class HomeActivity extends AppCompatActivity {
         binding.inputText.setText(this.data + data);
     }
 
-    private void doCalculation() {
+    private void replaceString() {
         data = binding.inputText.getText().toString();
         data = data.replace("%", "/100");
         data = data.replace("÷", "/");
         data = data.replace("x", "*");
+    }
+
+    private void doCalculation() {
+        replaceString();
+
+/*
+        DEPENDENCY IMPLEMENTATION
+ */
+        Context rhino = Context.enter();
+        rhino.setOptimizationLevel(-1);     //when nothing is generated.
+        String result = "";
+        try {
+            Scriptable scriptable = rhino.initSafeStandardObjects();
+            result = rhino.evaluateString(scriptable, data, "javascript", 1, null).toString();
+        } catch (Exception e) {
+            Toast.makeText(this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+        binding.outputText.setText(result);
     }
 }
