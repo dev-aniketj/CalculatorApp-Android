@@ -16,12 +16,12 @@
             android:id="@+id/input_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="right|end"
+            android:gravity="end"
             android:paddingEnd="20dp"
             android:paddingRight="20dp"
             android:text="7 x 2"
             android:textColor="@color/textColor"
-            android:textSize="32sp" />
+            android:textSize="32sp"/>
 
         <TextView
             android:id="@+id/output_text"
