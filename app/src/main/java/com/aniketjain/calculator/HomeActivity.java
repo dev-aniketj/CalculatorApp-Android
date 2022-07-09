@@ -37,11 +37,21 @@ public class HomeActivity extends AppCompatActivity {
         binding.btn8.setOnClickListener(view -> setInputData("8"));
         binding.btn9.setOnClickListener(view -> setInputData("9"));
 
-        binding.btnDot.setOnClickListener(view -> setInputData("."));
         binding.btnAc.setOnClickListener(view -> {
             binding.inputText.setText("");
             binding.outputText.setText("");
         });
+        binding.btnPlusMinus.setOnClickListener(view -> {
+        });
+        binding.btnPerc.setOnClickListener(view ->  setInputData("/100"));
+        binding.btnDiv.setOnClickListener(view ->  setInputData("/"));
+        binding.btnMul.setOnClickListener(view ->  setInputData("*"));
+        binding.btnMinus.setOnClickListener(view -> setInputData("-"));
+        binding.btnPlus.setOnClickListener(view -> setInputData("+"));
+        binding.btnEqual.setOnClickListener(view -> {
+        });
+
+        binding.btnDot.setOnClickListener(view -> setInputData("."));
 
     }
 
